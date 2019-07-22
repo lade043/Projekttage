@@ -1,2 +1,3 @@
 Produkte = ["melone","orange","ananas"]
 Woerterbuch = {"melone":8,"orange":88, "ananas":888}
+print (Woerterbuch)
