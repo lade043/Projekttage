@@ -15,7 +15,10 @@
 # for produkt in Produkte:
 #     print (produkt)
 
-zaehler = 0
-while True:
-    print (zaehler)
-    zaehler = zaehler + 1
+# zaehler = 0
+# while True:
+#     print (zaehler)
+#     zaehler = zaehler + 1
+
+def Addiere(Zahl1,Zahl2):
+    return Zahl1+Zahl2)
