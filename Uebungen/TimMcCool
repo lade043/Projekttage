@@ -1,0 +1,7 @@
+wette = (int(input("Wähle eine Zahl zwischen 1 und 10!")))
+if wette > 10:
+    print("Deine Zahl ist zu hoch!")
+
+wahr = 8
+if wette == wahr:
+    print("Super! Richtig!")
