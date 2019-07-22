@@ -23,3 +23,4 @@ zaehler = 0
 while True:
     print(zaehler)
     zaehler = zaehler + 1
+
