@@ -1,12 +1,2 @@
-vorname = str(input("Was ist dein Vorname?"))
-nachname = str(input("Was ist dein Nachname?"))
-gesc= str(input("Was ist dein Geschlecht? (m/w)"))
-alter = int(input("Wie alt bist du?"))
-
-if gesc == "m": anr = "Herr"
-if gesc == "w": anr = "Frau"
-
-if alter >= 18:
-    print("Sie sind volljährig, "+anr+" "+nachname)
-elif alter <= 18:
-    print("Du bist minderjährig, "+vorname)
+Produkte = ["melone","orange","ananas"]
+Woerterbuch = {"melone":8,"orange":88, "ananas":888}
