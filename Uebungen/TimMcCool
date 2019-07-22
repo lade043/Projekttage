@@ -1,7 +1,12 @@
-vorname = input (str("Vorname:"))
-nachname = input (str("Nachname:"))
-geschlecht = input (str("Geschlecht (m/w)"))
-alter = input(str("Alter:"))
-if alter >= 18: if geschlecht = m: print("Hallo Herr "+nachname) anrede = "Ihnen" anrede2 =
-if alter >= 18: if geschlecht = w: print("Hallo Frau "+nachname)
-if alter <= 18: print("Hallo "+vorname)
+vorname = str(input("Was ist dein Vorname?"))
+nachname = str(input("Was ist dein Nachname?"))
+gesc= str(input("Was ist dein Geschlecht? (m/w)"))
+alter = int(input("Wie alt bist du?"))
+
+if gesc == "m": anr = "Herr"
+if gesc == "w": anr = "Frau"
+
+if alter >= 18:
+    print("Sie sind volljährig, "+anr+" "+nachname)
+elif alter <= 18:
+    print("Du bist minderjährig, "+vorname)
