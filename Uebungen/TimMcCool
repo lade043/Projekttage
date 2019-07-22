@@ -1,3 +1,5 @@
+print ("STECKBRIEEF")
+pprint (" ")
 print ("Fragen:")
 name = input (str("Was ist dein Name?"))
 alter = input (str("Was ist dein Alter?"))
