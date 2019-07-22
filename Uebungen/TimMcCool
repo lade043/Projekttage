@@ -3,7 +3,7 @@
 #print(name)
 #print(alter)
 #print("Name: " + name + " Alter: " + str(alter))
-counter = 0
-while counter < 10:
-    print (counter)
-    counter = counter + 1
+#counter = 0
+#while counter < 10:
+   # print (counter)
+    #counter = counter + 1ddd
