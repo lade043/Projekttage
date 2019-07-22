@@ -1,2 +1,9 @@
-test = 2
-print(test)
+print ("Fragen:")
+name = input (str("Was ist dein Name?"))
+alter = input (str("Was ist dein Alter?"))
+ort = input (str("Wo wohnst du?"))
+print (" ")
+print ("Antworten:")
+print ("Name: " + name)
+print ("Alter: " + alter)
+print ("Wohnort: " + ort)
