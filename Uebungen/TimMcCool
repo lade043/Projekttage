@@ -1,3 +1,9 @@
 Produkte = ["melone","orange","ananas"]
 Woerterbuch = {"melone":8,"orange":88, "ananas":888}
-print (Woerterbuch)
+#print (Woerterbuch)
+#for produkt in Produkte:
+ #   print (Produkt)
+zaehler = (int(input("Wähle eine Zahl")))
+while zaehler <= 10:
+    print (zaehler)
+    zaehler = zaehler + 1
