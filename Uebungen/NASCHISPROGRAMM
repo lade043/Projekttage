@@ -1,4 +1,4 @@
-name= Flo
+#name= Flo
 print(name)
 alter= 16
 print(alter)
@@ -7,4 +7,5 @@ if alter>=10
 elif alter <=9
     print("ehren bra")
 zaehler = 0
+while True:
 
