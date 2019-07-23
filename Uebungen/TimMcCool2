@@ -1,1 +1,12 @@
-
+import random
+geheimzahl = random.randrange (40)
+eingabe = 0
+while eingabe != geheimzahl:
+    eingabe = int(input("Bitte geben Sie eine Zahl ein:"))
+    if eingabe > geheimzahl:
+        print("Leider falsch. Ihre Eingabe ist größer als die Geheimzahl. :-(")
+    if eingabe < geheimzahl:
+        print("Leider falsch. Ihre Eingabe ist kleiner als die Geheimzahl. :-(")
+print("Herzlichen Glückwunsch! Sie haben die richtige Zahl ausgewählt!")
+geheimzahl = str(geheimzahl)
+print("Ihre Geheimzahl war "+geheimzahl+"!")
