@@ -1,3 +1,0 @@
-name = "Huan"
-text = "Hier bitte Text einfügen"
-SDAfsv
