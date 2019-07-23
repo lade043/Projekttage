@@ -14,3 +14,4 @@ Formeln = [k.Formel('Kraftformel', i=k.Groesse('F', 'N', False), a=k.Groesse('m'
            k.Formel("Potentielle Energie" , i=k.Groesse("Epot","J",False),b=k.Groesse("m","kg", False),
                     c=k.Groesse("Höhe","m",False), z=konstante_eins,y=konstante_eins,x=konstante_eins)
            ]
+
