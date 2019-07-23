@@ -10,4 +10,7 @@ Formeln = [k.Formel('Kraftformel', i=k.Groesse('F', 'N', False), a=k.Groesse('m'
                     y=k.Groesse(None, None, True, 2)),
            k.Formel('Gewichtskraft', i=k.Groesse('Fg', 'N',False), a=k.Groesse(None,None,True,9.81),b=('h','m',False),z=konstante_eins,y=konstante_eins,x=konstante_eins),
            k.Formel('Spannenergie', i=k.Groesse('Espann','J', False), a=k.Groesse(None, None, True, 0.5),
-                    b=k.Groesse('D', '', False), c=k.Groesse('s', 'm', False), x=konstante_eins, y=konstante_eins, z=k.Groesse(None, None, True, 2))]
+                    b=k.Groesse('D', '', False), c=k.Groesse('s', 'm', False), x=konstante_eins, y=konstante_eins, z=k.Groesse(None, None, True, 2)),
+           k.Formel("Potentielle Energie" , i=k.Groesse("Epot","J",False),b=k.Groesse("m","kg", False),
+                    c=k.Groesse("Höhe","m",False), z=konstante_eins,y=konstante_eins,x=konstante_eins)
+           ]
