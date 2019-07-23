@@ -1,3 +1,11 @@
+class Groesse:
+    def __init__(self, formelsymbol, einheit, konst, wert=None):
+        self.formelsymbol = formelsymbol
+        self.einheit = einheit
+        self.wert = wert
+        self.konst = konst
+
+
 class Formel:
     def __init__(self, name, i, a=Groesse(None, None, True, 0), b=Groesse(None, None, True, 0),
                  c=Groesse(None, None, True, 0), d=Groesse(None, None, True, 0), e=Groesse(None, None, True, 0),
@@ -21,9 +29,3 @@ class Formel:
                 self.liste.append(var)
 
 
-class Groesse:
-    def __init__(self, formelsymbol, einheit, konst, wert=None):
-        self.formelsymbol = formelsymbol
-        self.einheit = einheit
-        self.wert = wert
-        self.konst = konst
