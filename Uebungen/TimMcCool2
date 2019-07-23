@@ -14,7 +14,7 @@ while true == 0:
     print(" ")
     versuch = str(input("Möchten Sie es erneut mit einer neuen Geheimzahl versuchen? (ja/nein)"))
     if versuch == "ja":
-        print("Es wurde ine neue Geheimzahl festgelegt. Bitte versuchen Sie es erneut.")
+        print("Es wurde eine neue Geheimzahl festgelegt. Bitte versuchen Sie es erneut.")
         print(" ")
     if versuch == "nein":
         print("Das Projekt ist beendet.")
