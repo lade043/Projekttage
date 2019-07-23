@@ -28,4 +28,3 @@ class Formel:
             if var.konst is False:
                 self.liste.append(var)
 
-Formeln = []
