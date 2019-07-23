@@ -8,5 +8,4 @@ while eingabe != geheimzahl:
     if eingabe < geheimzahl:
         print("Leider falsch. Ihre Eingabe ist kleiner als die Geheimzahl. :-(")
 print("Herzlichen Glückwunsch! Sie haben die richtige Zahl ausgewählt!")
-geheimzahl = str(geheimzahl)
-print("Ihre Geheimzahl war "+geheimzahl+"!")
+print("Ihre Geheimzahl war "+str(geheimzahl)+"!")
