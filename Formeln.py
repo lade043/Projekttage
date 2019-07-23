@@ -8,4 +8,6 @@ Formeln = [k.Formel('Kraftformel', i=k.Groesse('F', 'N', False), a=k.Groesse('m'
            k.Formel('Gleichm. beschl. Bew.', i=k.Groesse('s', 'm', False), a=k.Groesse(None, None, True, 0.5),
                     b=('a', 'm/s^2', False), c=k.Groesse('t', 's', False), z=konstante_eins, x=konstante_eins,
                     y=k.Groesse(None, None, True, 2)),
+           k.Formel('Elektrische Leistung', i=k.Groesse('P', 'W', False), a=k.Groesse('U', 'V', False),
+                    b=k.Groesse('I','A', False), c=konstante_eins, z=konstante_eins, x=konstante_eins, y=konstante_eins)
            ]
