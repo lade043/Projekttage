@@ -107,6 +107,8 @@ class Formel:
             self.solver._solve_to_c()
         elif 'b' == ges.equals_var:
             self.solver._solve_to_b()
+        elif 'a' == ges.equals_var:
+            self.solver._solve_to_a()
 
 
     def _solve_to_i(self):
