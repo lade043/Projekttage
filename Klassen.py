@@ -116,6 +116,7 @@ class Formel:
         temp_dicts.append(self)
         ret = None
         self.solver.set_dicts(temp_dicts)
+        self.solver.set_geg()
         if 'i' == ges.equals_var:
             ret = self.solver.solve_to_i()
         elif 'e' == ges.equals_var:

@@ -20,17 +20,18 @@ def user_Input():
 
 
 def user_Output(liste):
-    geg = liste[0]
-    ges = liste[1]
-    formel_str = liste[2].string
-    formel_name = liste[2].Name
+    geg = liste[1][0]
+    ges = liste[1][1]
+    formel_str = liste[1][2].string
+    formel_name = liste[1][2].name
     #einsetzen von ergebnis in ges
+    ges[list(ges.keys())[0]] = liste[0]
     print("100% \nDas Programm hat fertig gerechnet!")
     print("Dies war gegeben: ")
     for wert in geg:
         print(wert + " = " + str(geg[wert]))
     print("\nDas was gesucht: ")
     for wert1 in ges:
-        print(wert1 + " = " + ges[wert1])
+        print(wert1 + " = " + str(ges[wert1]))
     print("\nDiese Formel habn wir genutzt: " + formel_name)
     print("So sieht die Formel aus: " + str(formel_str))
