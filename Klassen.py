@@ -21,41 +21,48 @@ class Formel:
     class Solver:
         def __init__(self, formel):
             self.formel = formel
+            self.dicts = []
+
+        def set_dicts(self, dicts):
+            self.dicts = dicts
+
+        def get_dicts(self):
+            return self.dicts
 
         def solve_to_i(self):
-            return (self.formel.a**self.formel.z) * (self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) + self.formel.d * self.formel.e * self.formel.f + self.formel.g
+            return [(self.formel.a**self.formel.z) * (self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) + self.formel.d * self.formel.e * self.formel.f + self.formel.g, self.get_dicts()]
 
         def solve_to_a(self):
-            return ((self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) + self.formel.d * self.formel.e *self.formel.f + self.formel.g * self.formel.i)**1/self.formel.z
+            return [((self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) + self.formel.d * self.formel.e *self.formel.f + self.formel.g * self.formel.i)**1/self.formel.z, self.get_dicts()]
 
         def solve_to_b(self):
-            return ((self.formel.a**self.formel.z) * (self.formel.c**self.formel.x) +self.formel.d *self.formel.e *self.formel.f + self.formel.g)**1/self.formel.y
+            return [((self.formel.a**self.formel.z) * (self.formel.c**self.formel.x) +self.formel.d *self.formel.e *self.formel.f + self.formel.g)**1/self.formel.y, self.get_dicts()]
 
         def solve_to_c(self):
-            return ((self.formel.a**self.formel.z) * (self.formel.b**self.formel.y) + self.formel.d *self.formel.e *self.formel.f +self.formel.g * self.formel.i)**1/self.formel.x
+            return [((self.formel.a**self.formel.z) * (self.formel.b**self.formel.y) + self.formel.d *self.formel.e *self.formel.f +self.formel.g * self.formel.i)**1/self.formel.x, self.get_dicts()]
 
         def solve_to_d(self):
-            return self.formel.i - self.formel.g - (self.formel.a**self.formel.z) * (self.formel.b**self.formel.y)* (self.formel.c**self.formel.x) / self.formel.e * self.formel.f
+            return [self.formel.i - self.formel.g - (self.formel.a**self.formel.z) * (self.formel.b**self.formel.y)* (self.formel.c**self.formel.x) / self.formel.e * self.formel.f, self.get_dicts()]
 
         def solve_to_e(self):
-            return self.formel.i - self.formel.g - (self.formel.a**2) * (self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) / self.formel.d * self.formel.f
+            return [self.formel.i - self.formel.g - (self.formel.a**2) * (self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) / self.formel.d * self.formel.f, self.get_dicts()]
 
         def solve_to_f(self):
-            return (self.formel.i-self.formel.g-(self.formel.a**self.formel.z)*(self.formel.b**self.formel.y)*(self.formel.c**self.formel.x)) / (self.formel.d * self.formel.e)
+            return [(self.formel.i-self.formel.g-(self.formel.a**self.formel.z)*(self.formel.b**self.formel.y)*(self.formel.c**self.formel.x)) / (self.formel.d * self.formel.e), self.get_dicts()]
 
         def solve_to_g(self):
-            return - ((self.formel.a**self.formel.z) * (self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) + self.formel.d * self.formel.e * self.formel.f - self.formel.i)
+            return [- ((self.formel.a**self.formel.z) * (self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) + self.formel.d * self.formel.e * self.formel.f - self.formel.i), self.get_dicts()]
 
         def solve_to_z(self):
-            return math.log((self.formel.i-self.formel.d*self.formel.e*self.formel.f-self.formel.g) / ((self.formel.b**self.formel.y) * (self.formel.c**self.formel.x)), self.formel.a)
+            return [math.log((self.formel.i-self.formel.d*self.formel.e*self.formel.f-self.formel.g) / ((self.formel.b**self.formel.y) * (self.formel.c**self.formel.x)), self.formel.a), self.get_dicts()]
 
         def solve_to_y(self):
-            return math.log((self.formel.i-self.formel.d*self.formel.e*self.formel.f-self.formel.g)/((self.formel.a**self.formel.z) * (self.formel.c**self.formel.x)), self.formel.b)
+            return [math.log((self.formel.i-self.formel.d*self.formel.e*self.formel.f-self.formel.g)/((self.formel.a**self.formel.z) * (self.formel.c**self.formel.x)), self.formel.b), self.get_dicts()]
 
         def solve_to_x(self):
-            return math.log(self.formel.i-self.formel.d*self.formel.e*self.formel.f-self.formel.g)/(self.formel.a**self.formel.z)*(self.formel.b**self.formel.y, self.formel.c)
+            return [math.log(self.formel.i-self.formel.d*self.formel.e*self.formel.f-self.formel.g)/(self.formel.a**self.formel.z)*(self.formel.b**self.formel.y, self.formel.c), self.get_dicts()]
 
-    def __init__(self, name, i, a=Groesse(None, None, True, 0), b=Groesse(None, None, True, 0),
+    def __init__(self, name, grundform, i, a=Groesse(None, None, True, 0), b=Groesse(None, None, True, 0),
                  c=Groesse(None, None, True, 0), d=Groesse(None, None, True, 0), e=Groesse(None, None, True, 0),
                  f=Groesse(None, None, True, 0), g=Groesse(None, None, True, 0), z=Groesse(None, None, True, 0),
                  y=Groesse(None, None, True, 0), x=Groesse(None, None, True, 0)):
@@ -83,6 +90,7 @@ class Formel:
         self.i = i
         self.i.set_equals_var('i')
         self.liste = []
+        self.string = grundform
         self.solver = self.Solver(self)
         for var in [self.a, self.b, self.c, self.d, self.e, self.f, self.g, self.z, self.y, self.x, self.i]:
             if var.konst is False:
@@ -92,13 +100,17 @@ class Formel:
         temp_liste = deepcopy(self.liste)
         for geg_element in geg:
             for liste_element in temp_liste:
-                # serach for element with fitting formelsymbol and then del it
+                if geg_element == liste_element.formelsymbol:
+                    del()
                 pass
         if len(temp_liste) == 1 and ges[0] == temp_liste[0]: # has to be changed accordingly
             return [True, temp_liste[0]]
         return [False, None]
 
-    def solve(self, ges):
+    def solve(self, ges, dicts):
+        temp_dicts = dicts
+        temp_dicts.append(self)
+        self.solver.set_dicts(temp_dicts)
         if 'i' == ges.equals_var:
             self.solver.solve_to_i()
         elif 'e' == ges.equals_var:
