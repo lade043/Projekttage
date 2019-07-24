@@ -34,4 +34,4 @@ def user_Output(liste):
     for wert1 in ges:
         print(wert1 + " = " + str(ges[wert1]))
     print("\nDiese Formel habn wir genutzt: " + formel_name)
-    print("So sieht die Formel aus: " + str(formel_str))
+    print("So sieht die Formel aus: " + str(formel_str) + "\n\n\n\n\n\n")
