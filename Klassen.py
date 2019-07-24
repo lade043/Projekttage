@@ -24,7 +24,7 @@ class Formel:
             return (a**z) * (b**y) * (c**x) + d * e * f + g
 
         def _solve_to_a(self):
-            pass
+            return ((b**y) * (c**x) + d * e *f + g * i)**1/z
 
         def _solve_to_b(self):
             pass
