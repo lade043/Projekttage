@@ -36,7 +36,7 @@ class Formel:
             return [((self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) + self.formel.d * self.formel.e *self.formel.f + self.formel.g * self.formel.i)**1/self.formel.z, self.get_dicts()]
 
         def solve_to_b(self):
-            return [((self.formel.a**self.formel.z) * (self.formel.c**self.formel.x) +self.formel.d *self.formel.e *self.formel.f + self.formel.g)**1/self.formel.y, self.get_dicts()]
+            return [((self.formel.a.wert**self.formel.z.wert) * (self.formel.c.wert**self.formel.x.wert) +self.formel.d.wert *self.formel.e.wert *self.formel.f.wert + self.formel.g.wert)**1/self.formel.y.wert, self.get_dicts()]
 
         def solve_to_c(self):
             return [((self.formel.a**self.formel.z) * (self.formel.b**self.formel.y) + self.formel.d *self.formel.e *self.formel.f +self.formel.g * self.formel.i)**1/self.formel.x, self.get_dicts()]
@@ -102,27 +102,40 @@ class Formel:
             for i, liste_element in enumerate(temp_liste):
                 if geg_element == liste_element.formelsymbol:
                     temp_liste.pop(i)
-        if len(temp_liste) == 1 and list(ges.keys())[0] == temp_liste[0]:
+        if len(temp_liste) == 1 and list(ges.keys())[0] == temp_liste[0].formelsymbol:
             return [True, temp_liste[0]]
         return [False, None]
 
     def solve(self, ges, dicts):
         temp_dicts = dicts
         temp_dicts.append(self)
+        ret = None
         self.solver.set_dicts(temp_dicts)
         if 'i' == ges.equals_var:
-            self.solver.solve_to_i()
+            ret = self.solver.solve_to_i()
         elif 'e' == ges.equals_var:
-            self.solver.solve_to_e()
+            ret = self.solver.solve_to_e()
         elif 'c' == ges.equals_var:
-            self.solver.solve_to_c()
+            ret = self.solver.solve_to_c()
         elif 'b' == ges.equals_var:
-            self.solver.solve_to_b()
+            ret = self.solver.solve_to_b()
         elif 'a' == ges.equals_var:
-            self.solver.solve_to_a()
+            ret = self.solver.solve_to_a()
         elif 'x' == ges.equals_var:
-            self.solver.solve_to_x()
+            ret = self.solver.solve_to_x()
         elif 'd' == ges.equals_var:
-            self.solver. solve_to_d()
+            ret = self.solver. solve_to_d()
+        elif 'e' == ges.equals_var:
+            ret = self.solver. solve_to_e()
+        elif 'f' == ges.equals_var:
+            ret = self.solver. solve_to_f()
+        elif 'g' == ges.equals_var:
+            ret = self.solver. solve_to_g()
+        elif 'y' == ges.equals_var:
+            ret = self.solver. solve_to_y()
+        elif 'z' == ges.equals_var:
+            ret = self.solver. solve_to_z()
+
+        return ret
 
 
