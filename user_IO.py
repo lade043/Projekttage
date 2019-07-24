@@ -17,6 +17,7 @@ def user_Input():
     ges[gesinput] = None
     return [geg, ges]
 
+
 def user_Output(geg, ges, formelname, formelaufbau):
     print("100% \nDas Programm hat fertig gerechnet!")
     print("Dies war gegeben: ")
