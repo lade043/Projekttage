@@ -44,7 +44,7 @@ class Formel:
         def solve_to_b(self):
             return [((self.formel.i.wert - self.formel.d.wert * self.formel.e.wert * self.formel.f.wert - self.formel.g.wert)/((self.formel.a.wert ** self.formel.z.wert) * (self.formel.c.wert ** self.formel.x.wert)))**(1/self.formel.y.wert), self.get_dicts()]
 
-        def _solve_to_c(self):
+        def solve_to_c(self):
             return ((self.formel.a.wert**self.formel.z.wert) * (self.formel.b.wert**self.formel.y.wert) + self.formel.d.wert *self.formel.e.wert *self.formel.f.wert +self.formel.g.wert * self.formel.i.wert)**1/self.formel.x.wert
 
         def solve_to_d(self):
