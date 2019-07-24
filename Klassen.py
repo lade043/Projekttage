@@ -48,7 +48,7 @@ class Formel:
             return [self.formel.i - self.formel.g - (self.formel.a**2) * (self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) / self.formel.d * self.formel.f, self.get_dicts()]
 
         def solve_to_f(self):
-            return [(self.formel.i-self.formel.g-(self.formel.a**self.formel.z)*(self.formel.b**self.formel.y)*(self.formel.c**self.formel.x)) / (self.formel.d * self.formel.e), self.get_dicts()]
+            return [(self.formel.i.wert-self.formel.g.wert-(self.formel.a.wert**self.formel.z.wert)*(self.formel.b.wert**self.formel.y.wert)*(self.formel.c.wert**self.formel.x.wert)) / (self.formel.d.wert * self.formel.e.wert), self.get_dicts()]
 
         def solve_to_g(self):
             return [- ((self.formel.a**self.formel.z) * (self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) + self.formel.d * self.formel.e * self.formel.f - self.formel.i), self.get_dicts()]
