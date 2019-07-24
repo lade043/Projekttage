@@ -98,6 +98,11 @@ class Formel:
     def solve(self, ges):
         pass
 
+    def _solve_to_i(self):
+        pass
+
+
+
 
 
 math.sqrt()
