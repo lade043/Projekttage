@@ -33,10 +33,10 @@ class Formel:
             pass
 
         def _solve_to_d(self):
-            pass
+            return i - g - (a**z) * (b**y)* (c**x) / e * f
 
         def _solve_to_e(self):
-            pass
+            return i - g - (a**2) * (b**y) * (c**x) / d * f
 
         def _solve_to_f(self):
             pass
@@ -51,7 +51,7 @@ class Formel:
             pass
 
         def _solve_to_x(self):
-            pass
+            return math.log(i-d*e*f-g)/(a**z)*(b**y, c)
 
     def __init__(self, name, i, a=Groesse(None, None, True, 0), b=Groesse(None, None, True, 0),
                  c=Groesse(None, None, True, 0), d=Groesse(None, None, True, 0), e=Groesse(None, None, True, 0),
@@ -97,6 +97,11 @@ class Formel:
 
     def solve(self, ges):
         pass
+
+    def _solve_to_i(self):
+        pass
+
+
 
 
 
