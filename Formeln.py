@@ -13,7 +13,7 @@ Formeln = [k.Formel('Kraftformel', i=k.Groesse('F', 'N', False), a=k.Groesse('m'
            k.Formel('Spannenergie', i=k.Groesse('Espann','J', False), a=k.Groesse(None, None, True, 0.5),
                     b=k.Groesse('D', 'N/m', False), c=k.Groesse('s', 'm', False), x=konstante_eins, y=konstante_eins,
                     z=k.Groesse(None, None, True, 2)),
-           k.Formel('Potentielle Energie' , i=k.Groesse('Epot','J',False),a=k.Groesse('m','kg', False),
+           k.Formel('Potentielle Energie', i=k.Groesse('Epot','J',False),a=k.Groesse('m','kg', False),
                     b=k.Groesse(None, None, True, 9.81), c=k.Groesse('h','m',False), z=konstante_eins,
                     y=konstante_eins,x=konstante_eins),
            k.Formel('Kinetische Energie',i=k.Groesse('Ekin','J', False), a=k.Groesse(None, None, True, 0.5),
@@ -37,4 +37,4 @@ def looper(geg, ges):
     for formel in Formeln:
         temp_is_solvable = formel.is_solvable(geg, ges)
         if temp_is_solvable[0]:
-            formel.solve(temp_is_solvable[1])
+            formel.solve(temp_is_solvable[1], [geg, ges])
