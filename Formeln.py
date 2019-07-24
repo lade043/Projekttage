@@ -31,3 +31,10 @@ Formeln = [k.Formel('Kraftformel', i=k.Groesse('F', 'N', False), a=k.Groesse('m'
                     b=k.Groesse('v', 'm/s', False), c=konstante_eins, z=konstante_eins, y=konstante_eins,
                     x=konstante_eins)
            ]
+
+
+def looper(geg, ges):
+    for formel in Formeln:
+        temp_is_solvable = formel.is_solvable(geg, ges)
+        if temp_is_solvable[0]:
+            formel.solve(temp_is_solvable[1])
