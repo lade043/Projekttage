@@ -44,10 +44,10 @@ class Formel:
             return (i-g-(a**z)*(b**y)*(c**x)) / (d * e)
 
         def _solve_to_g(self):
-            pass - ((a**z) * (b**y) * (c**x) + d * e * f - i)
+            return - ((a**z) * (b**y) * (c**x) + d * e * f - i)
 
-        def _solve_to_z(self): # fehlt
-            pass
+        def _solve_to_z(self):
+            return math.log((i-d*e*f-g) / ((b**y) * (c**x)), a)
 
         def _solve_to_y(self):
             return math.log((i-d*e*f-g)/((a**z) * (c**x)), b)
