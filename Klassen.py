@@ -50,7 +50,7 @@ class Formel:
             return math.log((self.formel.i-self.formel.d*self.formel.e*self.formel.f-self.formel.g) / ((self.formel.b**self.formel.y) * (self.formel.c**self.formel.x)), self.formel.a)
 
         def solve_to_y(self):
-            return math.log((self.formel.i-self.formel.d*self.formel.e*self.formel.f-self.g)/((self.formel.a**self.formel.z) * (self.formel.c**self.formel.x)), self.formel.b)
+            return math.log((self.formel.i-self.formel.d*self.formel.e*self.formel.f-self.formel.g)/((self.formel.a**self.formel.z) * (self.formel.c**self.formel.x)), self.formel.b)
 
         def solve_to_x(self):
             return math.log(self.formel.i-self.formel.d*self.formel.e*self.formel.f-self.formel.g)/(self.formel.a**self.formel.z)*(self.formel.b**self.formel.y, self.formel.c)
