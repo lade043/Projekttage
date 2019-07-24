@@ -41,8 +41,8 @@ class Formel:
         def _solve_to_f(self):
             pass
 
-        def _solve_to_g(self):# fehlt
-            pass
+        def _solve_to_g(self):
+            pass - ((a**z) * (b**y) * (c**x) + d * e * f - i)
 
         def _solve_to_z(self): # fehlt
             pass
