@@ -26,7 +26,8 @@ class Formel:
         def set_geg(self):
             for element in self.dicts[0]:
                 for element1 in self.formel.liste:
-                    element1.set(self.dicts[0][element])
+                    if element == element1.formelsymbol:
+                        element1.set(self.dicts[0][element])
 
         def set_dicts(self, dicts):
             self.dicts = dicts
