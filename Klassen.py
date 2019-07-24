@@ -42,7 +42,7 @@ class Formel:
             return [((self.formel.a**self.formel.z) * (self.formel.b**self.formel.y) + self.formel.d *self.formel.e *self.formel.f +self.formel.g * self.formel.i)**1/self.formel.x, self.get_dicts()]
 
         def solve_to_d(self):
-            return [self.formel.i - self.formel.g - (self.formel.a**self.formel.z) * (self.formel.b**self.formel.y)* (self.formel.c**self.formel.x) / self.formel.e * self.formel.f, self.get_dicts()]
+            return [self.formel.i.wert - self.formel.g.wert - (self.formel.a**self.formel.z.wert) * (self.formel.b**self.formel.y.wert)* (self.formel.c**self.formel.x.wert) / self.formel.e.wert * self.formel.f.wert, self.get_dicts()]
 
         def solve_to_e(self):
             return [self.formel.i - self.formel.g - (self.formel.a**2) * (self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) / self.formel.d * self.formel.f, self.get_dicts()]
