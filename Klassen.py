@@ -1,4 +1,5 @@
 from copy import deepcopy
+import math
 
 
 class Groesse:
@@ -17,6 +18,41 @@ class Groesse:
 
 
 class Formel:
+    class Solver:
+        def _solve_to_i(self):
+            self.
+            return (a**z) * (b**y) * (c**x) + d * e * f + g
+
+        def _solve_to_a(self):
+            pass
+
+        def _solve_to_b(self):
+            pass
+
+        def _solve_to_c(self):
+            pass
+
+        def _solve_to_d(self):
+            pass
+
+        def _solve_to_e(self):
+            pass
+
+        def _solve_to_f(self):
+            pass
+
+        def _solve_to_g(self):# fehlt
+            pass
+
+        def _solve_to_z(self): # fehlt
+            pass
+
+        def _solve_to_y(self):
+            pass
+
+        def _solve_to_x(self):
+            pass
+
     def __init__(self, name, i, a=Groesse(None, None, True, 0), b=Groesse(None, None, True, 0),
                  c=Groesse(None, None, True, 0), d=Groesse(None, None, True, 0), e=Groesse(None, None, True, 0),
                  f=Groesse(None, None, True, 0), g=Groesse(None, None, True, 0), z=Groesse(None, None, True, 0),
@@ -67,3 +103,6 @@ class Formel:
 
 
 
+
+
+math.sqrt()

@@ -1,0 +1,7 @@
+print ("Hallo mein Name ist Kot")
+name = input ("Und dein Name?")
+print ("Ist dein Name wirklich" + name + "?")
+print ("nein du lauch")
+name2 = input("Wie heißt du dann???")
+print ("ich heiße" + name2 + "du lauch")
+print ("Ich heiße Karl Heinz der große du Lauch")
