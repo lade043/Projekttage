@@ -37,4 +37,4 @@ def looper(geg, ges):
     for formel in Formeln:
         temp_is_solvable = formel.is_solvable(geg, ges)
         if temp_is_solvable[0]:
-            formel.solve(temp_is_solvable[1], [geg, ges])
+            return formel.solve(temp_is_solvable[1], [geg, ges])
