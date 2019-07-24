@@ -9,12 +9,12 @@ def user_Input():
         geginput = input("Welche Formelzeichen sind gegeben? Geben Sie immer nur EINS ein! \n Bestätigen sie Ihre Eingaben mit 'Fertig'\n")
         if geginput == "Fertig":
             for symbol in geg:
-                geg[symbol] = float(input("Geben Sie den Wert zu " + symbol + " ein."))
+                geg[symbol] = float(input("Geben Sie den Wert zu " + symbol + " ein.\n"))
             break
         else:
             geg[geginput] = None
 
-    gesinput = input("Welches Formelzeichen sind gesucht?")
+    gesinput = input("Welches Formelzeichen sind gesucht?\n")
     ges[gesinput] = None
     return [geg, ges]
 
