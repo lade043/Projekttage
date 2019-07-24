@@ -32,5 +32,5 @@ def user_Output(liste):
     print("\nDas was gesucht: ")
     for wert1 in ges:
         print(wert1 + " = " + ges[wert1])
-    print("\nDiese Formel habn wir genutzt: " )
-    print("So sieht die Formel aus: " + str())
+    print("\nDiese Formel habn wir genutzt: " + formel_name)
+    print("So sieht die Formel aus: " + str(formel_str))
