@@ -13,7 +13,7 @@ Formeln = [k.Formel('Kraftformel', "F=m*a", i=k.Groesse('F', 'N', False), a=k.Gr
            k.Formel('Spannenergie', i=k.Groesse('Espann','J', False), a=k.Groesse(None, None, True, 0.5),
                     b=k.Groesse('D', 'N/m', False), c=k.Groesse('s', 'm', False), x=konstante_eins, y=konstante_eins,
                     z=k.Groesse(None, None, True, 2)),
-           k.Formel('Potentielle Energie', i=k.Groesse('Epot','J',False),a=k.Groesse('m','kg', False),
+           k.Formel('Potentielle Energie',"Epot=m*g*h", i=k.Groesse('Epot','J',False),a=k.Groesse('m','kg', False),
                     b=k.Groesse(None, None, True, 9.81), c=k.Groesse('h','m',False), z=konstante_eins,
                     y=konstante_eins,x=konstante_eins),
            k.Formel('Kinetische Energie',i=k.Groesse('Ekin','J', False), a=k.Groesse(None, None, True, 0.5),
