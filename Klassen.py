@@ -36,7 +36,7 @@ class Formel:
             return [((self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) + self.formel.d * self.formel.e *self.formel.f + self.formel.g * self.formel.i)**1/self.formel.z, self.get_dicts()]
 
         def solve_to_b(self):
-            return [((self.formel.a**self.formel.z) * (self.formel.c**self.formel.x) +self.formel.d *self.formel.e *self.formel.f + self.formel.g)**1/self.formel.y, self.get_dicts()]
+            return [((self.formel.a.wert**self.formel.z.wert) * (self.formel.c.wert**self.formel.x.wert) +self.formel.d.wert *self.formel.e.wert *self.formel.f.wert + self.formel.g.wert)**1/self.formel.y.wert, self.get_dicts()]
 
         def solve_to_c(self):
             return [((self.formel.a**self.formel.z) * (self.formel.b**self.formel.y) + self.formel.d *self.formel.e *self.formel.f +self.formel.g * self.formel.i)**1/self.formel.x, self.get_dicts()]
@@ -102,7 +102,7 @@ class Formel:
             for i, liste_element in enumerate(temp_liste):
                 if geg_element == liste_element.formelsymbol:
                     temp_liste.pop(i)
-        if len(temp_liste) == 1 and list(ges.keys())[0] == temp_liste[0]:
+        if len(temp_liste) == 1 and list(ges.keys())[0] == temp_liste[0].formelsymbol:
             return [True, temp_liste[0]]
         return [False, None]
 
