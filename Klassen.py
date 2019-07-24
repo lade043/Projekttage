@@ -99,11 +99,10 @@ class Formel:
     def is_solvable(self, geg, ges):
         temp_liste = deepcopy(self.liste)
         for geg_element in geg:
-            for liste_element in temp_liste:
+            for i, liste_element in enumerate(temp_liste):
                 if geg_element == liste_element.formelsymbol:
-                    del()
-                pass
-        if len(temp_liste) == 1 and ges[0] == temp_liste[0]: # has to be changed accordingly
+                    temp_liste.pop(i)
+        if len(temp_liste) == 1 and list(ges.keys())[0] == temp_liste[0]:
             return [True, temp_liste[0]]
         return [False, None]
 
