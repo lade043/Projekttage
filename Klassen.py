@@ -23,37 +23,37 @@ class Formel:
             self.formel = formel
 
         def _solve_to_i(self):
-            return (a**z) * (b**y) * (c**x) + d * e * f + g
+            return (self.formel.a**self.formel.z) * (self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) + self.formel.d * self.formel.e * self.formel.f + self.formel.g
 
         def _solve_to_a(self):
-            return ((b**y) * (c**x) + d * e *f + g * i)**1/z
+            return ((self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) + self.formel.d * self.formel.e *self.formel.f + self.formel.g * self.formel.i)**1/self.formel.z
 
         def _solve_to_b(self):
-            return ((a**z) * (c**x) +d * e * f + g)**1/y
+            return ((self.formel.a**z) * (self.formel.c**x) +self.formel.d * e * f + g)**1/y
 
         def _solve_to_c(self):
-            return ((a**z) * (b**y) + d * e * f + g * i)**1/x
+            return ((self.formel.a**z) * (self.formel.b**y) + self.formel.d * e * f + g * i)**1/x
 
         def _solve_to_d(self):
-            return i - g - (a**z) * (b**y)* (c**x) / e * f
+            return i - g - (self.formel.a**z) * (self.formel.b**y)* (self.formel.c**x) / e * f
 
         def _solve_to_e(self):
-            return i - g - (a**2) * (b**y) * (c**x) / d * f
+            return i - g - (self.formel.a**2) * (self.formel.b**y) * (self.formel.c**x) / self.formel.d * f
 
         def _solve_to_f(self):
-            return (i-g-(a**z)*(b**y)*(c**x)) / (d * e)
+            return (i-g-(self.formel.a**z)*(self.formel.b**y)*(self.formel.c**x)) / (self.formel.d * e)
 
         def _solve_to_g(self):
-            return - ((a**z) * (b**y) * (c**x) + d * e * f - i)
+            return - ((self.formel.a**z) * (self.formel.b**y) * (self.formel.c**x) + self.formel.d * e * f - i)
 
         def _solve_to_z(self):
-            return math.log((i-d*e*f-g) / ((b**y) * (c**x)), a)
+            return math.log((i-self.formel.d*e*f-g) / ((self.formel.b**y) * (self.formel.c**x)), self.formel.a)
 
         def _solve_to_y(self):
-            return math.log((i-d*e*f-g)/((a**z) * (c**x)), b)
+            return math.log((i-self.formel.d*e*f-g)/((self.formel.a**z) * (self.formel.c**x)), self.formel.b)
 
         def _solve_to_x(self):
-            return math.log(i-d*e*f-g)/(a**z)*(b**y, c)
+            return math.log(i-self.formel.d*e*f-g)/(self.formel.a**z)*(self.formel.b**y, self.formel.c)
 
     def __init__(self, name, i, a=Groesse(None, None, True, 0), b=Groesse(None, None, True, 0),
                  c=Groesse(None, None, True, 0), d=Groesse(None, None, True, 0), e=Groesse(None, None, True, 0),
