@@ -19,18 +19,20 @@ class Groesse:
 
 class Formel:
     class Solver:
+        def __init__(self, formel):
+            self.formel = formel
+
         def _solve_to_i(self):
-            self.
             return (a**z) * (b**y) * (c**x) + d * e * f + g
 
         def _solve_to_a(self):
             return ((b**y) * (c**x) + d * e *f + g * i)**1/z
 
         def _solve_to_b(self):
-            pass ((a**z) * (c**x) +d * e * f + g)**1/y
+            return ((a**z) * (c**x) +d * e * f + g)**1/y
 
         def _solve_to_c(self):
-            pass ((a**z) * (b**y) + d * e * f + g * i)**1/x
+            return ((a**z) * (b**y) + d * e * f + g * i)**1/x
 
         def _solve_to_d(self):
             return i - g - (a**z) * (b**y)* (c**x) / e * f
@@ -39,7 +41,7 @@ class Formel:
             return i - g - (a**2) * (b**y) * (c**x) / d * f
 
         def _solve_to_f(self):
-            pass
+            return (i-g-(a**z)*(b**y)*(c**x)) / (d * e)
 
         def _solve_to_g(self):# fehlt
             pass
@@ -48,7 +50,7 @@ class Formel:
             pass
 
         def _solve_to_y(self):
-            pass
+            return math.log((i-d*e*f-g)/((a**z) * (c**x)), b)
 
         def _solve_to_x(self):
             return math.log(i-d*e*f-g)/(a**z)*(b**y, c)
@@ -81,6 +83,7 @@ class Formel:
         self.i = i
         self.i.set_equals_var('i')
         self.liste = []
+        self.solver = self.Solver(self)
         for var in [self.a, self.b, self.c, self.d, self.e, self.f, self.g, self.z, self.y, self.x, self.i]:
             if var.konst is False:
                 self.liste.append(var)
