@@ -26,7 +26,7 @@ def user_Output(liste):
     formel_name = liste[1][2].name
     #einsetzen von ergebnis in ges
     ges[list(ges.keys())[0]] = liste[0]
-    print("100% \nDas Programm hat fertig gerechnet!")
+    print("\n\n\n100% \nDas Programm hat fertig gerechnet!")
     print("Dies war gegeben: ")
     for wert in geg:
         print(wert + " = " + str(geg[wert]))
