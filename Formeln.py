@@ -6,7 +6,7 @@ Formeln = [k.Formel('Kraftformel', "F=m*a", i=k.Groesse('F', 'N', False), a=k.Gr
                     b=k.Groesse('a', 'm/s', False), c=konstante_eins, z=konstante_eins,
                     y=konstante_eins, x=konstante_eins),
            k.Formel('Gleichm. beschl. Bew.',"s=0.5*a*t^2", i=k.Groesse('s', 'm', False), a=k.Groesse(None, None, True, 0.5),
-                    b=('a', 'm/s^2', False), c=k.Groesse('t', 's', False), z=konstante_eins, x=konstante_eins,
+                    b=k.Groesse('a', 'm/s^2', False), c=k.Groesse('t', 's', False), z=konstante_eins, x=konstante_eins,
                     y=k.Groesse(None, None, True, 2)),
            k.Formel('Gewichtskraft',"Fg=9,81*h", i=k.Groesse('Fg', 'N',False), a=k.Groesse(None,None,True,9.81),b=('h','m',False),
                     c=konstante_eins, z=konstante_eins,y=konstante_eins,x=konstante_eins),
