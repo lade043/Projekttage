@@ -125,6 +125,16 @@ class Formel:
             ret = self.solver.solve_to_x()
         elif 'd' == ges.equals_var:
             ret = self.solver. solve_to_d()
+        elif 'e' == ges.equals_var:
+            ret = self.solver. solve_to_e()
+        elif 'f' == ges.equals_var:
+            ret = self.solver. solve_to_f()
+        elif 'g' == ges.equals_var:
+            ret = self.solver. solve_to_g()
+        elif 'y' == ges.equals_var:
+            ret = self.solver. solve_to_y()
+        elif 'z' == ges.equals_var:
+            ret = self.solver. solve_to_z()
 
         return ret
 
