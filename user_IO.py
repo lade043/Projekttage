@@ -1,3 +1,4 @@
+import Formeln
 def user_Input():
     geg = {}
     ges = {}
@@ -18,7 +19,12 @@ def user_Input():
     return [geg, ges]
 
 
-def user_Output(geg, ges, formelname, formelaufbau):
+def user_Output(liste):
+    geg = liste[0]
+    ges = liste[1]
+    formel_str = liste[2].string
+    formel_name = liste[2].Name
+    #einsetzen von ergebnis in ges
     print("100% \nDas Programm hat fertig gerechnet!")
     print("Dies war gegeben: ")
     for wert in geg:
@@ -26,5 +32,5 @@ def user_Output(geg, ges, formelname, formelaufbau):
     print("\nDas was gesucht: ")
     for wert1 in ges:
         print(wert1 + " = " + ges[wert1])
-    print("\nDiese Formel habn wir genutzt: " + formelname)
-    print("So sieht die Formel aus: " + str(formelaufbau))
+    print("\nDiese Formel habn wir genutzt: " + formel_name)
+    print("So sieht die Formel aus: " + str(formel_str))
