@@ -51,7 +51,7 @@ class Formel:
             pass
 
         def _solve_to_x(self):
-            pass
+            return math.log(i-d*e*f-g)/(a**z)*(b**y, c)
 
     def __init__(self, name, i, a=Groesse(None, None, True, 0), b=Groesse(None, None, True, 0),
                  c=Groesse(None, None, True, 0), d=Groesse(None, None, True, 0), e=Groesse(None, None, True, 0),
