@@ -109,20 +109,23 @@ class Formel:
     def solve(self, ges, dicts):
         temp_dicts = dicts
         temp_dicts.append(self)
+        ret = None
         self.solver.set_dicts(temp_dicts)
         if 'i' == ges.equals_var:
-            self.solver.solve_to_i()
+            ret = self.solver.solve_to_i()
         elif 'e' == ges.equals_var:
-            self.solver.solve_to_e()
+            ret = self.solver.solve_to_e()
         elif 'c' == ges.equals_var:
-            self.solver.solve_to_c()
+            ret = self.solver.solve_to_c()
         elif 'b' == ges.equals_var:
-            self.solver.solve_to_b()
+            ret = self.solver.solve_to_b()
         elif 'a' == ges.equals_var:
-            self.solver.solve_to_a()
+            ret = self.solver.solve_to_a()
         elif 'x' == ges.equals_var:
-            self.solver.solve_to_x()
+            ret = self.solver.solve_to_x()
         elif 'd' == ges.equals_var:
-            self.solver. solve_to_d()
+            ret = self.solver. solve_to_d()
+
+        return ret
 
 
