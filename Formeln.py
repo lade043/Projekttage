@@ -8,7 +8,7 @@ Formeln = [k.Formel('Kraftformel', "F=m*a", i=k.Groesse('F', 'N', False), a=k.Gr
            k.Formel('Gleichm. beschl. Bew.', i=k.Groesse('s', 'm', False), a=k.Groesse(None, None, True, 0.5),
                     b=('a', 'm/s^2', False), c=k.Groesse('t', 's', False), z=konstante_eins, x=konstante_eins,
                     y=k.Groesse(None, None, True, 2)),
-           k.Formel('Gewichtskraft', i=k.Groesse('Fg', 'N',False), a=k.Groesse(None,None,True,9.81),b=('h','m',False),
+           k.Formel('Gewichtskraft',"Fg=9,81*h", i=k.Groesse('Fg', 'N',False), a=k.Groesse(None,None,True,9.81),b=('h','m',False),
                     c=konstante_eins, z=konstante_eins,y=konstante_eins,x=konstante_eins),
            k.Formel('Spannenergie', i=k.Groesse('Espann','J', False), a=k.Groesse(None, None, True, 0.5),
                     b=k.Groesse('D', 'N/m', False), c=k.Groesse('s', 'm', False), x=konstante_eins, y=konstante_eins,
@@ -21,7 +21,7 @@ Formeln = [k.Formel('Kraftformel', "F=m*a", i=k.Groesse('F', 'N', False), a=k.Gr
                     y=k.Groesse(None, None, True, 2)),
            k.Formel('Elektrische Leistung', i=k.Groesse('P', 'W', False), a=k.Groesse('U', 'V', False),
                     b=k.Groesse('I','A', False), c=konstante_eins, z=konstante_eins, x=konstante_eins, y=konstante_eins),
-           k.Formel("Geschwindigkeit", i=k.Groesse ('v', 'm/s',False), a=k.Groesse('s', 'm', False),
+           k.Formel("Geschwindigkeit",'v=s/t', i=k.Groesse ('v', 'm/s',False), a=k.Groesse('s', 'm', False),
                     b=k.Groesse ('t','s', False), z= konstante_eins, y= konstante_eins, x=k.Groesse(None,None,True,-1)),
 
            k.Formel('Wiederstand', i=k.Groesse('R', 'Ohm', False), a=k.Groesse('U', 'V', False),
