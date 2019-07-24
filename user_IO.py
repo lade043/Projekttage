@@ -17,4 +17,13 @@ def user_Input():
     ges[gesinput] = None
     return [geg, ges]
 
-
+def user_Output(geg, ges, formelname, formelaufbau):
+    print("100% \nDas Programm hat fertig gerechnet!")
+    print("Dies war gegeben: ")
+    for wert in geg:
+        print(wert + " = " + str(geg[wert]))
+    print("\nDas was gesucht: ")
+    for wert1 in ges:
+        print(wert1 + " = " + ges[wert1])
+    print("\nDiese Formel habn wir genutzt: " + formelname)
+    print("So sieht die Formel aus: " + str(formelaufbau))
