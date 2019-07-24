@@ -101,6 +101,8 @@ class Formel:
     def solve(self, ges):
         if 'i' == ges.equals_var:
             self.solver._solve_to_i()
+        elif 'e' == ges.equals_var:
+            self.solver._solve_to_e()
 
 
     def _solve_to_i(self):
