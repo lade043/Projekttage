@@ -29,31 +29,31 @@ class Formel:
             return ((self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) + self.formel.d * self.formel.e *self.formel.f + self.formel.g * self.formel.i)**1/self.formel.z
 
         def _solve_to_b(self):
-            return ((self.formel.a**z) * (self.formel.c**x) +self.formel.d * e * f + g)**1/y
+            return ((self.formel.a**self.formel.z) * (self.formel.c**self.formel.x) +self.formel.d *self.formel.e *self.formel.f + self.formel.g)**1/self.formel.y
 
         def _solve_to_c(self):
-            return ((self.formel.a**z) * (self.formel.b**y) + self.formel.d * e * f + g * i)**1/x
+            return ((self.formel.a**self.formel.z) * (self.formel.b**self.formel.y) + self.formel.d *self.formel.e *self.formel.f +self.formel.g * self.formel.i)**1/self.formel.x
 
         def _solve_to_d(self):
-            return i - g - (self.formel.a**z) * (self.formel.b**y)* (self.formel.c**x) / e * f
+            return self.formel.i - self.formel.g - (self.formel.a**self.formel.z) * (self.formel.b**self.formel.y)* (self.formel.c**self.formel.x) / self.formel.e * self.formel.f
 
         def _solve_to_e(self):
-            return i - g - (self.formel.a**2) * (self.formel.b**y) * (self.formel.c**x) / self.formel.d * f
+            return self.formel.i - self.formel.g - (self.formel.a**2) * (self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) / self.formel.d * self.formel.f
 
         def _solve_to_f(self):
-            return (i-g-(self.formel.a**z)*(self.formel.b**y)*(self.formel.c**x)) / (self.formel.d * e)
+            return (self.formel.i-self.formel.g-(self.formel.a**self.formel.z)*(self.formel.b**self.formel.y)*(self.formel.c**self.formel.x)) / (self.formel.d * self.formel.e)
 
         def _solve_to_g(self):
-            return - ((self.formel.a**z) * (self.formel.b**y) * (self.formel.c**x) + self.formel.d * e * f - i)
+            return - ((self.formel.a**self.formel.z) * (self.formel.b**self.formel.y) * (self.formel.c**self.formel.x) + self.formel.d * self.formel.e * self.formel.f - self.formel.i)
 
         def _solve_to_z(self):
-            return math.log((i-self.formel.d*e*f-g) / ((self.formel.b**y) * (self.formel.c**x)), self.formel.a)
+            return math.log((self.formel.i-self.formel.d*self.formel.e*self.formel.f-self.formel.g) / ((self.formel.b**self.formel.y) * (self.formel.c**self.formel.x)), self.formel.a)
 
         def _solve_to_y(self):
-            return math.log((i-self.formel.d*e*f-g)/((self.formel.a**z) * (self.formel.c**x)), self.formel.b)
+            return math.log((self.formel.i-self.formel.d*self.formel.e*self.formel.f-self.g)/((self.formel.a**self.formel.z) * (self.formel.c**self.formel.x)), self.formel.b)
 
         def _solve_to_x(self):
-            return math.log(i-self.formel.d*e*f-g)/(self.formel.a**z)*(self.formel.b**y, self.formel.c)
+            return math.log(self.formel.i-self.formel.d*self.formel.e*self.formel.f-self.formel.g)/(self.formel.a**self.formel.z)*(self.formel.b**self.formel.y, self.formel.c)
 
     def __init__(self, name, i, a=Groesse(None, None, True, 0), b=Groesse(None, None, True, 0),
                  c=Groesse(None, None, True, 0), d=Groesse(None, None, True, 0), e=Groesse(None, None, True, 0),
@@ -99,7 +99,9 @@ class Formel:
         return [False, None]
 
     def solve(self, ges):
-        pass
+        if 'i' == ges.equals_var:
+            self.solver._solve_to_i()
+
 
     def _solve_to_i(self):
         pass
