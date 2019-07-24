@@ -27,10 +27,10 @@ class Formel:
             pass
 
         def _solve_to_b(self):
-            pass
+            pass ((a**z) * (c**x) +d * e * f + g)**1/y
 
         def _solve_to_c(self):
-            pass
+            pass ((a**z) * (b**y) + d * e * f + g * i)**1/x
 
         def _solve_to_d(self):
             pass
