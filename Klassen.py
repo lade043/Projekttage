@@ -36,7 +36,7 @@ class Formel:
             pass
 
         def _solve_to_e(self):
-            pass
+            return i - g - (a**2) * (b**y) * (c**x) / d * f
 
         def _solve_to_f(self):
             pass
