@@ -1,8 +1,8 @@
 print(
     "________________________________________________________________________________________________________________________________")
-print("TIM KROME")
+print("TIM")
 print("SPIEL: ERRATE DIE ZAHL")
-print("Erstellt von Tim Krome am 24.Juli 2019")
+print("Erstellt von Tim am 24.Juli 2019")
 print(" ")
 true = 0
 while true == 0:
